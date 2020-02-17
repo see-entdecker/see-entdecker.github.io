@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>See-Entdecker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/template.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet-0.7.3.css" />
+    <link rel="stylesheet" href="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="js/bxslider-4.2.5/jquery.bxslider.min.css" />
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    html,body { height: 100%;}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">See-Entdecker</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html">Karte</a></li>
+            <li><a href="search.html">Suche</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" style="height:100%">
+      <div id="map" style="height:30%" class="col-xs-12"></div>
+      
+
+<div class="jumbotron col-xs-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Formular zu <b>GROßER BROMBACHSEE</b></h3>
+            <span style='margin-left: 16px; margin-top: 8px;' class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span>&nbsp;<a href='see_67ef8b9017a.html'>Zurück zum See</a>
+          </div>
+          <div class="panel-body">
+            <form>
+                <div class="form-group">
+                    <label for="altname">Alternativer Name</label>
+                    <input type="text" class="form-control" id="altname" placeholder="Alternativer Name">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="angeln"> Angeln ist erlaubt?
+                </div>
+                <div class="form-group">
+                    <label for="anfahrt">Wie kommt man am besten zum See?</label>
+                    <textarea class="form-control" id="anfahrt" placeholder="Anfahrt" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="ausflug">Ausflugsziele in der Nähe?</label>
+                    <textarea class="form-control" id="ausflug" placeholder="Ausflugsziele" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="baden"> Baden ist erlaubt?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="dlrg"> See wird vom DLRG überwacht?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="dusche"> Öffentliche Dusche ist vorhanden?
+                </div>
+                <div class="form-group">
+                    <label for="eintrit">Eintrittskosten?</label>
+                    <textarea class="form-control" id="eintritt" placeholder="Eintritt" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email für Kontakt?</label>
+                    <input type="text" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="fkk"> Eigener FKK-Bereich vorhanden?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="freierzugang"> Ist der See frei zugänglich?
+                </div>
+                <div class="form-group">
+                    <label for="freizeit">Freizeitaktivitäten in der Nähe?</label>
+                    <textarea class="form-control" id="freizeit" placeholder="Freizeitaktivitäten" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="fussball"> Ist ein Fussballplatz mit Toren vorhanden?
+                </div>
+                <div class="form-group">
+                    <label for="grillen">Ist ein Grillplatz vorhanden? Ist Grillen mit eigenem Grill erlaubt?</label>
+                    <input type="text" class="form-control" id="grillen" placeholder="Grillen">
+                </div>
+                <div class="form-group">
+                    <label for="groesse">Größe des Sees (möglichst in Hektar)?</label>
+                    <input type="text" class="form-control" id="groesse" placeholder="Größe">
+                </div>
+                <div class="form-group">
+                    <label for="hoehe">Höhe des Sees (in Meter über dem Meeresspiegel)?</label>
+                    <input type="text" class="form-control" id="hoehe" placeholder="Höhe">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="hunde"> Sind Hunde erlaubt?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="idylle"> Ist der See idyllisch gelegen?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="kiosk"> Ist ein Kiosk oder Imbiss vorhanden?
+                </div>
+                <div class="form-group">
+                    <label for="kurzbeschreibung">Eine kurze Beschreibung des Sees?</label>
+                    <textarea class="form-control" id="kurzbeschreibung" placeholder="Kurzbeschreibung" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="name">(Gebräuchlicher) Name des Sees?</label>
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="naturerlebnis">Gibt es besondere Naturerlebnisse in der Nähe des Sees?</label>
+                    <textarea class="form-control" id="naturerlebnis" placeholder="Naturerlebnis" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="opnv">Ist der See mit dem öffentlichen Nahverkehr erreichbar?</label>
+                    <textarea class="form-control" id="opnv" placeholder="ÖPNV" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="ort">Zu welcher Gemeinde gehört der See (möglichst mit Postleitzahl)?</label>
+                    <input type="text" class="form-control" id="ort" placeholder="Ort und PLZ">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="kostenloserparkplatz"> Ist ein kostenloser Parkplatz vorhanden?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="parkplatz"> Ist ein Parkplatz vorhanden?
+                </div>
+                <div class="form-group"> <!-- nur einblende, wenn Parkplatz vorhanden.. -->
+                    <label for="parkgebuehr">Wie hoch sind die Parkgebühren?</label>
+                    <input type="text" class="form-control" id="parkgebuehr" placeholder="Parkgebühren">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="restaurant"> Ist ein Restaurant vorhanden?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="sandstrand"> Ist ein Sandstrand vorhanden?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="spielplatz"> Ist ein Spielplatz vorhanden?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="strandbad"> Ist am See ein Strandbad?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="surfen"> Surfen ist erlaubt?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="tauchen"> Tauchen ist erlaubt?
+                </div>
+                <div class="form-group">
+                    <label for="tiefe">Tiefe des Sees?</label>
+                    <input type="text" class="form-control" id="tiefe" placeholder="Tiefe">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="tischtennis"> Ist eine Tischtennisplatte vorhanden?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="uebernachten"> Gibt es Übernachtungsmöglichkeiten am See?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="volleyball"> Ist ein (Beach-)Volleyballfeld vorhanden?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="wandern"> Führen Wanderwege um den See? Gibt es Wanderwege in der Nähe des Sees?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="wc"> Ist ein WC vorhanden?
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="wiese"> Sind Liegewiesen vorhanden?
+                </div>
+                <div class="form-group">
+                    <label for="www">Gibt es eine Webseite zum See, zu einem Angelverein am See, zu einem Campingplatz o.ä.? </label>
+                    <textarea class="form-control" id="www" placeholder="WWW" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="zeiten">Hat der See Öffnungszeiten?</label>
+                    <input type="text" class="form-control" id="zeiten" placeholder="Zeiten">
+                </div>
+                <div class="form-group">
+                    <label for="kommentar">Zusätzlicher Kommentar? </label>
+                    <textarea class="form-control" id="kommentar" placeholder="Kommentar" rows="3"></textarea>
+                </div>
+                <button type="button" class="btn btn-success" style="margin-left: 44px;" id="gen_mail_button">Email erzeugen</button>
+                <div class="form-group" id="output_container" style="display:none;margin-top:16px;">
+                    <label for="output"><h4>Bitte senden Sie uns eine EMail mit folgendem Inhalt:</h4></label>
+                    <textarea class="form-control" id="output" rows="5"></textarea>
+                </div>
+            </form>
+          </div>
+        </div>       
+      </div>
+    </div><!-- /.container -->
+
+    <script src="https://see-entdecker.github.io/js/jquery-1.11.2.min.js"></script>
+    <script src="https://see-entdecker.github.io/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://see-entdecker.github.io/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://see-entdecker.github.io/js/leaflet-0.7.3.min.js"></script>
+    <script src="https://see-entdecker.github.io/js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.min.js"></script>
+    <script src="https://see-entdecker.github.io/js/bxslider-4.2.5/jquery.bxslider.min.js"></script>
+    <script src="https://see-entdecker.github.io/js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+        window.see.init_form('67ef8b9017a', {altname: 'BADESTRAND PLEINFELD', 
+name: 'GROßER BROMBACHSEE', 
+ort: 'PLEINFELD'});
+      });
+    </script>
+  </body>
+</html>
