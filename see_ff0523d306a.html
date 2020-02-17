@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>See-Entdecker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/template.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet-0.7.3.css" />
+    <link rel="stylesheet" href="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="js/bxslider-4.2.5/jquery.bxslider.min.css" />
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      html,body { height: 100%; }
+      .img-heading { padding-left:10px; padding-bottom:0px; padding-top:0px; }
+      ul#imgslider li {
+        left:-1px; /*this *centers* images within the slider*/
+        min-height:40px;
+      } 
+  	  .jumbotron p { font-size:14px; }
+  	  .dl-horizontal { margin-bottom:0px; }
+      #showImagesLink { cursor: pointer; }
+      .panel-body p { font-weight: 400; }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">See-Entdecker</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html">Karte</a></li>
+            <li><a href="search.html">Suche</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" style="height:100%">
+      <div id="map" style="height:30%" class="col-xs-12"></div>
+      
+
+      <div class="jumbotron col-xs-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Details zu <b>Altmühlsee</b></h3>
+            
+          </div>
+          <div class="panel-body">
+            <p>Schon im Umkreis von 50 Kilometer werden die Seen der Fränkischen Seenplatte auf den Landstraßen angekündigt. Der Altmühlsee ist sicher einer der lohnenswerten, aber wie es mit dem Tourismus so ist: manchmal, wenn es zu an heißen Wochenendtagen allzu voll ist, kann es nerven. Der Altmühlsee hat gleich mehrere Bademöglichkeiten. Seezentren nennen sich die fünf Stellen, die meist mit Kiosk, rollstuhlgerechte WCs, Duschen, Sandstrand, Spielplatz und Fahrradverleih aufwarten. <br /><br />Ein breiter Rundweg führt um den See. Natur und Freizeit zu verbinden ist das Ziel der Tourismusregion Fränkisches Seenland. <br /><br />Zwischen den fünf Anlegestellen kreuzt das *Personenschiff* „MS Altmühlsee“ im Linienverkehr übers Wasser. Die *Vogelinsel* bei Muhr am See ist eines der wichtigsten Schutzgebiete für Zugvögel in Bayern. Mit der Informationsstelle des LBV, einem Lehrpfad und Aussichtsturm lässt sich die Natur erkunden. <br /><br />Der Eintritt zum See ist frei, die Parkplätze sind dagegen gebührenpflichtig. <br /><br />Das *Restaurant* Boothaus befindet sich im Seezentrum Schlungenhof. Ein besonderer *Abenteuerspielplatz* zum Damm-Bauen, Matschpampe werfen und mit großen Röhrenrutschen liegt am Seezentrum Wald. Ganz in der Nähe des Campingplatzes „Fischer Michl“. (Beach-)*VolleyballfelderÜ befinden sich im  Seezentrum Schlungenhof, Seezentrum Muhr am See und Seezentrum Wald, *Tischtennisplatten* sind am Seezentrum Schlungenhof. *Familygolf* und *Bolzplatz* sind am Seezentrum Schlungenhof vorhanden.<br /><br />Drei *Campingplätze* liegen am See: Der Familienzeltplatz Seezentrum Muhr am See, Campingplatz „Altmühlsee“ und der Campingplatz „Fischer Michl“<br /><br />*Wohnmobilübernachtungsplätze* sind im Surfzentrum Schlungenhof, Seezentrum Muhr am See vorhanden.<br /><br />Zwischen dem Seezentrum Gunzenhausen-Schlungenhof und dem Surfzentrum Schlungenhof ist ein *Hundestrand* ausgewiesen. Für die Besucher mit Vierbeiner gibt es neben einer Liegewiese auch einen rund 20 Meter breiten Sandstrand. Ergänzt wird der Badestrand durch einen speziellen Hundespielplatz. Außerhalb der ausgewiesenen Badestände und Liegewiesen, sowie auf den Wegen der Strandanlagen können Gäste  mit Ihrem angeleinten Hund spazieren gehen. <br /><br />Ein ausgewiesener *FKK-Badestrand* befindet sich am Seezentrum Muhr am See und ist seit der Saison 2015 geöffnet. (sj)</p>
+            <div class="row" style="margin-top: 24px">
+              <div class="col-xs-12 col-md-6" id="more_details_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                <dl class="dl-horizontal" id="more_details">
+                  <dt>Adresse</dt><dd>91710 Gunzenhausen</dd>
+                  <!--<dt>Link</dt><dd><a href='#|see_link_href|'>#|see_link|</a></dd>-->
+	      		  <dt>WWW</dt><dd><a href='http://www.fraenkisches-seenland.de/' target='_new'>Fränkisches Seenland</a></dd>
+                  <dt>Tiefe</dt><dd></dd>
+                  <dt>Höhe</dt><dd>413,00 m</dd>
+                  <dt>Größe</dt><dd>450 Hektar</dd>
+                  <dt>Koordinaten</dt><dd><a href="geo:49.1339312,10.7204926" id="geo_link">49.1339312, 10.7204926</a></dd>
+                </dl>
+                </div>
+              </div>
+              </div>
+            
+              <div class="col-xs-12 col-md-6" id="pictos_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <ul class="pictos">
+                      <li><span class='pictos angeln' title='Angelmöglichkeit'>&nbsp;</span></li><li><span class='pictos dusche' title='Dusche für Badegäste'>&nbsp;</span></li><li><span class='pictos grillen' title='Grillen'>&nbsp;</span></li><li><span class='pictos opnv' title='Mit ÖPNV erreichbar'>&nbsp;</span></li><li><span class='pictos restaurant' title='Restaurants in der Umgebung'>&nbsp;</span></li><li><span class='pictos spielplatz' title='Kinderspielplatz'>&nbsp;</span></li><li><span class='pictos surfen' title='Surfen/Segeln'>&nbsp;</span></li><li><span class='pictos tischtennis' title='Tischtennisplatte'>&nbsp;</span></li><li><span class='pictos volleyball' title='Volleyballfeld'>&nbsp;</span></li><li><span class='pictos wc' title='Öffentliches WC'>&nbsp;</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 24px" id="imgslider_container">
+              <div class="col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <!-- <a id="showImagesLink" href="javascript:showImages();"> -->
+                    <a id="showImagesLink">
+                    <div class="panel-heading img-heading">
+                        <h4 class="panel-heading">Bilder vom See</h4>
+                    </div>
+                    </a>
+                    <div class="panel-body" style="display:none;" id="image_container">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/leaflet-0.7.3.min.js"></script>
+    <script src="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.min.js"></script>
+    <script src="js/bxslider-4.2.5/jquery.bxslider.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+        window.see.init_see('ff0523d306a', "<ul id='imgslider'><li><img src='imgs/ff0523d306a/8a0a1c9cd47_s.JPG' srcset='imgs/ff0523d306a/8a0a1c9cd47_l.JPG 1024w, imgs/ff0523d306a/8a0a1c9cd47_m.JPG 800w, imgs/ff0523d306a/8a0a1c9cd47_s.JPG 480w'  title='Fotos: Fränkisches Seeland; foto-horst, MKummerer, Xocolatl, Myratz, Julian Herzog, CC-BY-SA-3.0'/></li><li><img src='imgs/ff0523d306a/2c5aa1110de_s.JPG' srcset='imgs/ff0523d306a/2c5aa1110de_l.JPG 1024w, imgs/ff0523d306a/2c5aa1110de_m.JPG 800w, imgs/ff0523d306a/2c5aa1110de_s.JPG 480w'  title='Fotos: Fränkisches Seeland; foto-horst, MKummerer, Xocolatl, Myratz, Julian Herzog, CC-BY-SA-3.0'/></li><li><img src='imgs/ff0523d306a/2c4b202ad17_s.JPG' srcset='imgs/ff0523d306a/2c4b202ad17_l.JPG 1024w, imgs/ff0523d306a/2c4b202ad17_m.JPG 800w, imgs/ff0523d306a/2c4b202ad17_s.JPG 480w'  title='Fotos: Fränkisches Seeland; foto-horst, MKummerer, Xocolatl, Myratz, Julian Herzog, CC-BY-SA-3.0'/></li><li><img src='imgs/ff0523d306a/8e00b83d3b0_s.jpg' srcset='imgs/ff0523d306a/8e00b83d3b0_l.jpg 1024w, imgs/ff0523d306a/8e00b83d3b0_m.jpg 800w, imgs/ff0523d306a/8e00b83d3b0_s.jpg 480w'  title='Fotos: Fränkisches Seeland; foto-horst, MKummerer, Xocolatl, Myratz, Julian Herzog, CC-BY-SA-3.0'/></li><li><img src='imgs/ff0523d306a/9d36765349c_s.JPG' srcset='imgs/ff0523d306a/9d36765349c_l.JPG 1024w, imgs/ff0523d306a/9d36765349c_m.JPG 800w, imgs/ff0523d306a/9d36765349c_s.JPG 480w'  title='Fotos: Fränkisches Seeland; foto-horst, MKummerer, Xocolatl, Myratz, Julian Herzog, CC-BY-SA-3.0'/></li><li><img src='imgs/ff0523d306a/462e499b3b4_s.jpg' srcset='imgs/ff0523d306a/462e499b3b4_l.jpg 1024w, imgs/ff0523d306a/462e499b3b4_m.jpg 800w, imgs/ff0523d306a/462e499b3b4_s.jpg 480w'  title='Fotos: Fränkisches Seeland; foto-horst, MKummerer, Xocolatl, Myratz, Julian Herzog, CC-BY-SA-3.0'/></li><li><img src='imgs/ff0523d306a/9092aac7265_s.jpg' srcset='imgs/ff0523d306a/9092aac7265_l.jpg 1024w, imgs/ff0523d306a/9092aac7265_m.jpg 800w, imgs/ff0523d306a/9092aac7265_s.jpg 480w'  title='Fotos: Fränkisches Seeland; foto-horst, MKummerer, Xocolatl, Myratz, Julian Herzog, CC-BY-SA-3.0'/></li><li><img src='imgs/ff0523d306a/18af83c9022_s.jpg' srcset='imgs/ff0523d306a/18af83c9022_l.jpg 1024w, imgs/ff0523d306a/18af83c9022_m.jpg 800w, imgs/ff0523d306a/18af83c9022_s.jpg 480w' /></li><li><img src='imgs/ff0523d306a/0f0cb432ecf_s.jpg' srcset='imgs/ff0523d306a/0f0cb432ecf_l.jpg 1024w, imgs/ff0523d306a/0f0cb432ecf_m.jpg 800w, imgs/ff0523d306a/0f0cb432ecf_s.jpg 480w' /></li><li><img src='imgs/ff0523d306a/b0e2848b473_s.jpg' srcset='imgs/ff0523d306a/b0e2848b473_l.jpg 1024w, imgs/ff0523d306a/b0e2848b473_m.jpg 800w, imgs/ff0523d306a/b0e2848b473_s.jpg 480w' /></li><li><img src='imgs/ff0523d306a/653ad2d5666_s.jpg' srcset='imgs/ff0523d306a/653ad2d5666_l.jpg 1024w, imgs/ff0523d306a/653ad2d5666_m.jpg 800w, imgs/ff0523d306a/653ad2d5666_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/2d9da06cef5_s.jpg' srcset='imgs/ff0523d306a/2d9da06cef5_l.jpg 1024w, imgs/ff0523d306a/2d9da06cef5_m.jpg 800w, imgs/ff0523d306a/2d9da06cef5_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/4bc1b3f87ca_s.jpg' srcset='imgs/ff0523d306a/4bc1b3f87ca_l.jpg 1024w, imgs/ff0523d306a/4bc1b3f87ca_m.jpg 800w, imgs/ff0523d306a/4bc1b3f87ca_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/e78d8e82fd7_s.jpg' srcset='imgs/ff0523d306a/e78d8e82fd7_l.jpg 1024w, imgs/ff0523d306a/e78d8e82fd7_m.jpg 800w, imgs/ff0523d306a/e78d8e82fd7_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/e51fe323fb8_s.jpg' srcset='imgs/ff0523d306a/e51fe323fb8_l.jpg 1024w, imgs/ff0523d306a/e51fe323fb8_m.jpg 800w, imgs/ff0523d306a/e51fe323fb8_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/8896670dc8c_s.jpg' srcset='imgs/ff0523d306a/8896670dc8c_l.jpg 1024w, imgs/ff0523d306a/8896670dc8c_m.jpg 800w, imgs/ff0523d306a/8896670dc8c_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/bc3c0e8bdd8_s.jpg' srcset='imgs/ff0523d306a/bc3c0e8bdd8_l.jpg 1024w, imgs/ff0523d306a/bc3c0e8bdd8_m.jpg 800w, imgs/ff0523d306a/bc3c0e8bdd8_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/d3b6c6ad94d_s.jpg' srcset='imgs/ff0523d306a/d3b6c6ad94d_l.jpg 1024w, imgs/ff0523d306a/d3b6c6ad94d_m.jpg 800w, imgs/ff0523d306a/d3b6c6ad94d_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/59bd34668e0_s.jpg' srcset='imgs/ff0523d306a/59bd34668e0_l.jpg 1024w, imgs/ff0523d306a/59bd34668e0_m.jpg 800w, imgs/ff0523d306a/59bd34668e0_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/0c1557718ed_s.jpg' srcset='imgs/ff0523d306a/0c1557718ed_l.jpg 1024w, imgs/ff0523d306a/0c1557718ed_m.jpg 800w, imgs/ff0523d306a/0c1557718ed_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/28fb164713c_s.jpg' srcset='imgs/ff0523d306a/28fb164713c_l.jpg 1024w, imgs/ff0523d306a/28fb164713c_m.jpg 800w, imgs/ff0523d306a/28fb164713c_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/6c3b1b0db40_s.jpg' srcset='imgs/ff0523d306a/6c3b1b0db40_l.jpg 1024w, imgs/ff0523d306a/6c3b1b0db40_m.jpg 800w, imgs/ff0523d306a/6c3b1b0db40_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/9581f57d2f2_s.jpg' srcset='imgs/ff0523d306a/9581f57d2f2_l.jpg 1024w, imgs/ff0523d306a/9581f57d2f2_m.jpg 800w, imgs/ff0523d306a/9581f57d2f2_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/eb083436365_s.jpg' srcset='imgs/ff0523d306a/eb083436365_l.jpg 1024w, imgs/ff0523d306a/eb083436365_m.jpg 800w, imgs/ff0523d306a/eb083436365_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/a716dc2e976_s.jpg' srcset='imgs/ff0523d306a/a716dc2e976_l.jpg 1024w, imgs/ff0523d306a/a716dc2e976_m.jpg 800w, imgs/ff0523d306a/a716dc2e976_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/db770bdc55a_s.jpg' srcset='imgs/ff0523d306a/db770bdc55a_l.jpg 1024w, imgs/ff0523d306a/db770bdc55a_m.jpg 800w, imgs/ff0523d306a/db770bdc55a_s.jpg 480w'  title='keine Regelung'/></li><li><img src='imgs/ff0523d306a/2fe03803478_s.jpg' srcset='imgs/ff0523d306a/2fe03803478_l.jpg 1024w, imgs/ff0523d306a/2fe03803478_m.jpg 800w, imgs/ff0523d306a/2fe03803478_s.jpg 480w'  title='keine Regelung'/></li></ul>");
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-97722808-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

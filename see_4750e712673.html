@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>See-Entdecker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/template.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet-0.7.3.css" />
+    <link rel="stylesheet" href="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="js/bxslider-4.2.5/jquery.bxslider.min.css" />
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      html,body { height: 100%; }
+      .img-heading { padding-left:10px; padding-bottom:0px; padding-top:0px; }
+      ul#imgslider li {
+        left:-1px; /*this *centers* images within the slider*/
+        min-height:40px;
+      } 
+  	  .jumbotron p { font-size:14px; }
+  	  .dl-horizontal { margin-bottom:0px; }
+      #showImagesLink { cursor: pointer; }
+      .panel-body p { font-weight: 400; }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">See-Entdecker</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html">Karte</a></li>
+            <li><a href="search.html">Suche</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" style="height:100%">
+      <div id="map" style="height:30%" class="col-xs-12"></div>
+      
+
+      <div class="jumbotron col-xs-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Details zu <b>Forggensee</b></h3>
+            
+          </div>
+          <div class="panel-body">
+            <p>Angeln, Surfen, Segeln, viele Badestellen, Liegewiesen, dazu das Panorama der Ammergauer, Lechtaler und Tannheimer Alpen. <br /><br />Der Forggensee zu Füßen von Schloss Neuschwanstein zählt zu den beliebtesten Wassersport- und Freizeitrevieren im bayerischen Voralpenland. Nicht immer ruhig, aber für Flachländer ist die Kulisse stets beeindruckend.<br /><br />Was ihm bei vollem Wasserstand niemand ansieht: der fünftgrößte bayerische See ist eine Schöpfung erst aus der Nachkriegszeit. Der sogenannte Erstaufstau war im Frühjahr 1954. Der 12 Kilometer lange und bis 3 Kilometer breite Lech-Stausee liegt nördlich von Füssen. <br /><br />Lohnende *Badeplätze* finden sich unter anderem am Bootshafen Füssen und am Illasbergsee, einer mit dem Forggensee nur über einen schmalen Kanal verbundenen Bucht. Weitere Badeplätze liegen am Westufer in Osterreinen, Dietringen und Roßhaupten und am Ostufer in Waltenhofen, Brunnen und in der Nähe des Hegratsriedsees.<br /><br />Am besten erreicht man diese Bademöglichkeiten per Fahrrad auf dem 32 Kilometer langen, beschilderten Forggensee-Radrundweg oder mit den Schiffen der Städtischen *Forggenseeschifffahrt*, die ab Bootshafen Füssen täglich 9 kleinere und größere Rundfahrten anbietet.<br /><br />Auch mit *Öffentlichen Verkehrsmitteln* ist der See gut erreichbar: Bootshafen Füssen und der angrenzende Badeplatz sind ab Bahnhof Füssen per ÖPNV-Buslinie 56. Außerdem gibt es an der B 16 in der Nähe des am Forggenseeufer gelegenen Festspielhauses noch eine Haltestelle der ÖPNV-Buslinie 72.<br /><br /><br />Verschiedene *Restaurants, Hotels und Kioske* liegen teils direkt am See. Vom 15. Mai bis zum 15. Oktober etwa hat das Restaurant-Café „Mar y Sol“ am Bootshafen Füssen geöffnet<br /><br />Private Grills sind nicht erlaubt. Am am Badeplatz beim Bootshafen liegt eine öffentliche Grillstelle.<br /><br />Die *Parkplätze* sind gebührenpflichtig. <br /><br />Zahlreiche *Ausflugsziele* gibt es in der Nähe: Altstadt Füssen, Museum der Stadt Füssen im Kloster St. Mang, Filialgalerie der Bayer. Staatsgemäldesammlungen im Hohen Schloss; Königsschlösser Hohenschwangau und Neuschwanstein, Museum der Bayerischen Könige, Walderlebniszentrum Ziegelwies mit Baumkronenweg, Lechfall. <br /><br />Wegen Schloss Neuschwanstein zählt auch der Forggensee zu den beliebtesten Touristenzielen in Deutschland. International also ist es hier, man darf sich aber am Massentourismus nicht stören. (sj)</p>
+            <div class="row" style="margin-top: 24px">
+              <div class="col-xs-12 col-md-6" id="more_details_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                <dl class="dl-horizontal" id="more_details">
+                  <dt>Adresse</dt><dd>87669 Rieden am Forggensee</dd>
+                  <!--<dt>Link</dt><dd><a href='#|see_link_href|'>#|see_link|</a></dd>-->
+	      		  <dt>WWW</dt><dd><a href='http://www.tourismus-ostallgaeu.de/' target='_new'>Tourismus Ostallgäu</a></dd>
+                  <dt>Tiefe</dt><dd></dd>
+                  <dt>Höhe</dt><dd>772,00 m</dd>
+                  <dt>Größe</dt><dd>1511 Hektar</dd>
+                  <dt>Koordinaten</dt><dd><a href="geo:47.6116175,10.7372011" id="geo_link">47.6116175, 10.7372011</a></dd>
+                </dl>
+                </div>
+              </div>
+              </div>
+            
+              <div class="col-xs-12 col-md-6" id="pictos_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <ul class="pictos">
+                      <li><span class='pictos angeln' title='Angelmöglichkeit'>&nbsp;</span></li><li><span class='pictos grillen' title='Grillen'>&nbsp;</span></li><li><span class='pictos kiosk' title='Kiosk/Bewirtung'>&nbsp;</span></li><li><span class='pictos opnv' title='Mit ÖPNV erreichbar'>&nbsp;</span></li><li><span class='pictos tischtennis' title='Tischtennisplatte'>&nbsp;</span></li><li><span class='pictos wc' title='Öffentliches WC'>&nbsp;</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 24px" id="imgslider_container">
+              <div class="col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <!-- <a id="showImagesLink" href="javascript:showImages();"> -->
+                    <a id="showImagesLink">
+                    <div class="panel-heading img-heading">
+                        <h4 class="panel-heading">Bilder vom See</h4>
+                    </div>
+                    </a>
+                    <div class="panel-body" style="display:none;" id="image_container">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/leaflet-0.7.3.min.js"></script>
+    <script src="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.min.js"></script>
+    <script src="js/bxslider-4.2.5/jquery.bxslider.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+        window.see.init_see('4750e712673', "<ul id='imgslider'><li><img src='imgs/4750e712673/1b7b1e8ee87_s.jpg' srcset='imgs/4750e712673/1b7b1e8ee87_l.jpg 1024w, imgs/4750e712673/1b7b1e8ee87_m.jpg 800w, imgs/4750e712673/1b7b1e8ee87_s.jpg 480w'  title='Fotos: Füssen Tourismus und Marketing; www.guenterstandl.de; Forggenseeschifffahrt Füssen'/></li><li><img src='imgs/4750e712673/c55b202e435_s.jpg' srcset='imgs/4750e712673/c55b202e435_l.jpg 1024w, imgs/4750e712673/c55b202e435_m.jpg 800w, imgs/4750e712673/c55b202e435_s.jpg 480w'  title='Fotos: Füssen Tourismus und Marketing; www.guenterstandl.de; Forggenseeschifffahrt Füssen'/></li></ul>");
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-97722808-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>See-Entdecker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/template.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet-0.7.3.css" />
+    <link rel="stylesheet" href="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="js/bxslider-4.2.5/jquery.bxslider.min.css" />
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      html,body { height: 100%; }
+      .img-heading { padding-left:10px; padding-bottom:0px; padding-top:0px; }
+      ul#imgslider li {
+        left:-1px; /*this *centers* images within the slider*/
+        min-height:40px;
+      } 
+  	  .jumbotron p { font-size:14px; }
+  	  .dl-horizontal { margin-bottom:0px; }
+      #showImagesLink { cursor: pointer; }
+      .panel-body p { font-weight: 400; }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">See-Entdecker</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html">Karte</a></li>
+            <li><a href="search.html">Suche</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" style="height:100%">
+      <div id="map" style="height:30%" class="col-xs-12"></div>
+      
+
+      <div class="jumbotron col-xs-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Details zu <b>Buchhorner See</b></h3>
+            
+          </div>
+          <div class="panel-body">
+            <p>Gleich drei Campingplätze liegen am Buchhorner See, einem Natursee, der zur Gemeinde Pfedelbach im schönen Hohenlohe gehört. Es ist also immer etwas los, und das liegt auch daran, dass einige Campingplatzgäste hier das ganze Jahr über Wohnen. An vielen Tagen ist der See also fest in Camperhand.  <br /><br />Es gibt sicher idyllischer gelegene Badeseen. Der Platz direkt am See ist nicht sonderlich üppig, eine kleine Stelle lässt sich wohlwollend als Sandstrand bezeichnen. Der Spielplatz immerhin ist durchaus passabel ausgestattet. <br /><br />In der Campingplatzgaststätte Seeklause wird Hausmannskost angeboten, auch die anderen Plätze bieten Speisen an. <br /><br />FKK-Freunde haben im nahegelegenen Pfedelbacher Ortsteil Untersteinbach ihr Domizil: Den FKK-Familiensportpark auf dem Simonsberg. <br /><br />Und mit dem Regiobus  RB 40 kann man den Bus sogar ohne eigenes Auto erreichen. An der Haltestelle Buchhorn-Ort aussteigen. (sj)</p><p><b>Anfahrt:</b> Verlassen Sie die Autobahn A 6 an der Autobahnausfahrt Öhringen. Biegen Sie Richtung Neuenstadt/Pfedelbach ab und fahren im Kreisverkehr die zweite Ausfahrt Richtung Mainhardt/Pfedelbach (Ohringen Süd/West) ab. Fahren Sie im nächsten Kreisverkehr die zweite Ausfahrt Richtung Mainhardt/Pfedelbach. Verlassen Sie den dritten Kreisel an der zweiten Ausfahrt Richtung Pfedelbach. Folgen Sie der Straße bis zum nächsten Kreisverkehr in Pfedelbach. Nehmen Sie im Kreisverkehr die erste Ausfahrt auf die Hauptstraße. Folgen Sie der Hauptstraße Richtung Heuberg. In Heuberg biegen Sie in der langgezogenen Kinkskurve nach rechts (Richtung Buchhorn) auf die Geddelsbacher Straße ab und folgen dem Straßenverlauf. In der Ortsmitte von Buchhorn biegen Sie links in die Seestraße ab.</p>
+            <div class="row" style="margin-top: 24px">
+              <div class="col-xs-12 col-md-6" id="more_details_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                <dl class="dl-horizontal" id="more_details">
+                  <dt>Adresse</dt><dd>Pfedelbach-Buchhorn</dd>
+                  <!--<dt>Link</dt><dd><a href='#|see_link_href|'>#|see_link|</a></dd>-->
+	      		  <dt>WWW</dt><dd><a href='http://www.pfedelbach.de' target='_new'>Stadt Pfedelbach</a><br /><a href='http://www.pfedelbach.de/tourismus/buchhorner-see.html' target='_new'>Infos zum See</a><br /><a href='http://www.camping-seewiese.de' target='_new'>Camping Seewiese</a><br /><a href='http://www.seeklause-leng.de' target='_new'>Camping Seeklause Leng</a><br /><a href='http://www.campingclub-ludwigsburg.de' target='_new'>Campingclub Ludwigsburg</a><br /><a href='http://www.campingplatz-untersteinbach.de' target='_new'>Campingplatz Untersteinbach</a><br /><a href='http://www.bffl-stuttgart.de' target='_new'>FKK-Camping</a></dd>
+                  <dt>Tiefe</dt><dd>2,50 Meter m</dd>
+                  <dt>Höhe</dt><dd>380,00 m</dd>
+                  <dt>Größe</dt><dd>2,5 Hektar</dd>
+                  <dt>Koordinaten</dt><dd><a href="geo:49.15397,9.50153" id="geo_link">49.15397, 9.50153</a></dd>
+                </dl>
+                </div>
+              </div>
+              </div>
+            
+              <div class="col-xs-12 col-md-6" id="pictos_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <ul class="pictos">
+                      <li><span class='pictos angeln' title='Angelmöglichkeit'>&nbsp;</span></li><li><span class='pictos kiosk' title='Kiosk/Bewirtung'>&nbsp;</span></li><li><span class='pictos opnv' title='Mit ÖPNV erreichbar'>&nbsp;</span></li><li><span class='pictos restaurant' title='Restaurants in der Umgebung'>&nbsp;</span></li><li><span class='pictos spielplatz' title='Kinderspielplatz'>&nbsp;</span></li><li><span class='pictos wc' title='Öffentliches WC'>&nbsp;</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 24px" id="imgslider_container">
+              <div class="col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <!-- <a id="showImagesLink" href="javascript:showImages();"> -->
+                    <a id="showImagesLink">
+                    <div class="panel-heading img-heading">
+                        <h4 class="panel-heading">Bilder vom See</h4>
+                    </div>
+                    </a>
+                    <div class="panel-body" style="display:none;" id="image_container">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/leaflet-0.7.3.min.js"></script>
+    <script src="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.min.js"></script>
+    <script src="js/bxslider-4.2.5/jquery.bxslider.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+        window.see.init_see('d3e273e4ff6', "<ul id='imgslider'><li><img src='imgs/d3e273e4ff6/5b4bc53ddfa_s.JPG' srcset='imgs/d3e273e4ff6/5b4bc53ddfa_l.JPG 1024w, imgs/d3e273e4ff6/5b4bc53ddfa_m.JPG 800w, imgs/d3e273e4ff6/5b4bc53ddfa_s.JPG 480w'  title='Foto: Stadt Pfedelbach'/></li><li><img src='imgs/d3e273e4ff6/ed317262af3_s.JPG' srcset='imgs/d3e273e4ff6/ed317262af3_l.JPG 1024w, imgs/d3e273e4ff6/ed317262af3_m.JPG 800w, imgs/d3e273e4ff6/ed317262af3_s.JPG 480w'  title='Foto: Stadt Pfedelbach'/></li><li><img src='imgs/d3e273e4ff6/11f357bbd5c_s.JPG' srcset='imgs/d3e273e4ff6/11f357bbd5c_l.JPG 1024w, imgs/d3e273e4ff6/11f357bbd5c_m.JPG 800w, imgs/d3e273e4ff6/11f357bbd5c_s.JPG 480w'  title='Foto: Stadt Pfedelbach'/></li></ul>");
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-97722808-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

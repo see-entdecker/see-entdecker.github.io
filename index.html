@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>See-Entdecker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/template.css" rel="stylesheet">
+
+    <style type="text/css">
+      @media all and (max-width: 768px) { 
+        #buttonA { margin-bottom: 12px; }
+      }
+    </style>
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">See-Entdecker</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="map.html">Karte</a></li>
+            <li><a href="search.html">Suche</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    <div class="container" style="padding-top:40px;">
+      <div class="starter-template jumbotron">
+        <h1>Baden, planschen, Natur genießen.</h1>
+        <h2>Entedecke deinen See in Baden-Württemberg, im Allgäu oder in Franken</h2>
+        <div class="row" style="padding-top:12px;">
+          <div class="col-sm-6">
+            <a class="btn btn-primary btn-lg" href="map.html" role="button" id="buttonA"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span><br />Direkt zur <b>Karte</b></a>
+          </div>
+          <div class="col-sm-6">
+            <a class="btn btn-primary btn-lg" href="search.html" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><br /> Direkt zur <b>Suche</b></a>
+          </div>
+        </div>
+        <div class="row" style="height: 24px">&nbsp;</div>
+
+        <div class="row" style="background-color: #ccc">
+          <div class="col-xs-12 col-sm-6" style="padding-top: 24px; max-height: 400px;">
+            <img src="imgs/UnterginsbacherBadesee.JPG" style="max-width:100%;max-height:100%;object-fit: contain;" />
+          </div>
+          <div class="col-xs-12 col-sm-6" style="padding: 32px;">
+            <h4>Ausflugsziel gesucht? Wir helfen dir, deinen idealen See zu finden. </h4>
+            Bei uns findet ihr die schönsten Seen - ob im Landkreis Heilbronn, Hohenlohekreis, im Schwäbischen Wald oder Badestellen am Bodensee. Entdeckt hier gute Badeplätze in Baden-Württemberg. Und damit es noch mehr werden: Jeder kann uns seinen Lieblingssee schicken. 
+          </div>
+        </div>
+
+        <div class="row" id="imgRow" style="background-color: #ccc">
+          <div class="col-xs-12 col-sm-6" style="padding: 32px;">
+            <h4>Freizeit für Familien</h4>
+            Manchmal lebt man seit Jahren in einer Stadt und plötzlich entdeckt man einen phantastischen kleinen See, der nur wenige Kilometer von der eigenen Haustür entfernt ist. Kann passieren. Probier doch mal, ob du bei uns fündig wirst. Wir würden uns freuen. 
+          </div>
+          <div class="col-xs-12 col-sm-6" id="imgEl" style="padding-top: 24px; padding-bottom: 24px; max-height: 400px;">
+              <img src="imgs/Ebnisee0.jpg" style="max-width:100%;max-height:100%;object-fit: contain;" />
+          </div>
+        </div>
+      </div>
+
+<!--
+
+      <div class="starter-template jumbotron">
+        <h1>Willkommen bei den See-Entdeckern ;-)</h1>
+        <div class="row" style="padding-top:12px;">
+          <div class="col-sm-6">
+            <a class="btn btn-primary btn-lg" href="map.html" role="button" id="buttonA">Direkt zur <b>Karte</b></a>
+          </div>
+          <div class="col-sm-6">
+            <a class="btn btn-primary btn-lg" href="search.html" role="button">Direkt zur <b>Suche</b></a>
+          </div>
+        </div>
+        <div class="row" style="height: 24px">&nbsp;</div>
+
+        <div class="row" style="background-color: #ccc">
+          <div class="col-xs-12 col-sm-6" style="padding-top: 24px; max-height: 400px;">
+            <img src="imgs/UnterginsbacherBadesee.JPG" style="max-width:100%;max-height:100%;object-fit: contain;" />
+          </div>
+          <div class="col-xs-12 col-sm-6" style="padding: 32px;">
+            <h4>Die schönsten Seen Baden-Württembergs</h4>
+            Keine Ahnung, wohin der nächste Badeausflug gehen soll? Da können wir helfen, denn bei uns findet ihr eine Übersicht der schönsten Seen Baden-Württembergs. Und weitere werden folgen!
+          </div>
+        </div>
+
+        <div class="row" id="imgRow" style="background-color: #ccc">
+          <div class="col-xs-12 col-sm-6" style="padding: 32px;">
+            <h4>Die schönsten Seen Baden-Württembergs</h4>
+            Keine Ahnung, wohin der nächste Badeausflug gehen soll? Da können wir helfen, denn bei uns findet ihr eine Übersicht der schönsten Seen Baden-Württembergs. Und weitere werden folgen!
+          </div>
+          <div class="col-xs-12 col-sm-6" id="imgEl" style="padding-top: 24px; padding-bottom: 24px; max-height: 400px;">
+              <img src="imgs/Ebnisee0.jpg" style="max-width:100%;max-height:100%;object-fit: contain;" />
+          </div>
+        </div>
+      </div>
+  -->
+      
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        window.see.init_index();
+      });
+    </script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-97722808-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

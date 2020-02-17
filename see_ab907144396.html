@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>See-Entdecker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/template.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet-0.7.3.css" />
+    <link rel="stylesheet" href="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="js/bxslider-4.2.5/jquery.bxslider.min.css" />
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      html,body { height: 100%; }
+      .img-heading { padding-left:10px; padding-bottom:0px; padding-top:0px; }
+      ul#imgslider li {
+        left:-1px; /*this *centers* images within the slider*/
+        min-height:40px;
+      } 
+  	  .jumbotron p { font-size:14px; }
+  	  .dl-horizontal { margin-bottom:0px; }
+      #showImagesLink { cursor: pointer; }
+      .panel-body p { font-weight: 400; }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">See-Entdecker</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html">Karte</a></li>
+            <li><a href="search.html">Suche</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" style="height:100%">
+      <div id="map" style="height:30%" class="col-xs-12"></div>
+      
+
+      <div class="jumbotron col-xs-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Details zu <b>Degenbachstausee</b></h3>
+            
+          </div>
+          <div class="panel-body">
+            <p>Man muss mit dem Wort „Geheimtipp“ ja vorsichtig sein. Und so würden wir den Degenbachstausee auch nie als solchen bezeichnen. Wenn man sich aber die Seen in Stadtnähe anschaut und die Frequentierung zu Hochsommerzeit, dann lässt sich über den See wenige Kilometer südlich von Crailsheim immerhin sagen, dass er auch im Hochsommer noch absolut erträglich ist, was die Menge der Menschen angeht. <br /><br />Die Infrastruktur beschränkt sich mit Duschen, WC, Umkleiden, Kiosk, Spielplatz mit Schaukel und Wippe, Grillstellen und Beachvolleyballfeld auf die Essentials. Und sogar ein kleiner Sandstrand ist vorhanden. Die eine Seite des Sees grenzt direkt an den Wald, was den Blick von der anderen Seite umso entspannter macht. <br /><br /><br />Am Degenbachstausee gibt es zwei öffentliche Grillstellen. Das Grillen ist <br />nur an den dafür ausgewiesenen Grillstellen erlaubt. Das Mitbringen und Benutzen eigener Grills ist nicht gestattet. Am Wochenende bei gutem Badewetter gibt es eine Aufsicht der DLRG-Gruppe Crailsheim.<br /><br /><br />FKK war zuletzt zwar verboten, aber nicht so streng. So gibt es ab und an ein paar Nackerte, die sich ins Wasser stürzen. Meistens liegen sie aber nur in der Sonne. <br /><br />Der Kreisverkehr fährt den Degenbachstausee mit seiner Buslinie 61 direkt an. (sj)</p><p><b>Anfahrt:</b> Aus Crailsheim südwärts Richtung Ellwangen auf der B290 herausfahren.<br />Die nächste Abbiegemöglichkeit nach links in Richtung Alexandersreut auf die <br />K 2643 abbiegen. In Alexandersreut dann die erste Abbiegemöglichkeit nach rechts in die Alexandersreuterstraße nehmen. Der Degenbachstausee liegt nach ca. 800 Metern auf der linken Seite. (sj)</p>
+            <div class="row" style="margin-top: 24px">
+              <div class="col-xs-12 col-md-6" id="more_details_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                <dl class="dl-horizontal" id="more_details">
+                  <dt>Adresse</dt><dd>Crailsheim</dd>
+                  <!--<dt>Link</dt><dd><a href='#|see_link_href|'>#|see_link|</a></dd>-->
+	      		  <dt>WWW</dt><dd></dd>
+                  <dt>Tiefe</dt><dd></dd>
+                  <dt>Höhe</dt><dd></dd>
+                  <dt>Größe</dt><dd>5,1 Hektar</dd>
+                  <dt>Koordinaten</dt><dd><a href="geo:49.09124,10.09117" id="geo_link">49.09124, 10.09117</a></dd>
+                </dl>
+                </div>
+              </div>
+              </div>
+            
+              <div class="col-xs-12 col-md-6" id="pictos_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <ul class="pictos">
+                      <li><span class='pictos grillen' title='Grillen'>&nbsp;</span></li><li><span class='pictos kiosk' title='Kiosk/Bewirtung'>&nbsp;</span></li><li><span class='pictos wc' title='Öffentliches WC'>&nbsp;</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 24px" id="imgslider_container">
+              <div class="col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <!-- <a id="showImagesLink" href="javascript:showImages();"> -->
+                    <a id="showImagesLink">
+                    <div class="panel-heading img-heading">
+                        <h4 class="panel-heading">Bilder vom See</h4>
+                    </div>
+                    </a>
+                    <div class="panel-body" style="display:none;" id="image_container">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/leaflet-0.7.3.min.js"></script>
+    <script src="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.min.js"></script>
+    <script src="js/bxslider-4.2.5/jquery.bxslider.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+        window.see.init_see('ab907144396', "<ul id='imgslider'><li><img src='imgs/ab907144396/8b91435bcb0_s.JPG' srcset='imgs/ab907144396/8b91435bcb0_l.JPG 1024w, imgs/ab907144396/8b91435bcb0_m.JPG 800w, imgs/ab907144396/8b91435bcb0_s.JPG 480w'  title=''/></li><li><img src='imgs/ab907144396/bfec8351289_s.JPG' srcset='imgs/ab907144396/bfec8351289_l.JPG 1024w, imgs/ab907144396/bfec8351289_m.JPG 800w, imgs/ab907144396/bfec8351289_s.JPG 480w'  title=''/></li></ul>");
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-97722808-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

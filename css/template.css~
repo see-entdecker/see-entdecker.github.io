@@ -1,0 +1,100 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+html,body { height: 100%;}
+
+ul.pictos {
+  list-style: none;
+}
+ul.pictos span{
+  display: list-item;
+  float:left;
+  height: 48px;
+  width: 48px;
+  margin: 12px;
+  border: 1px solid #eee;
+}
+
+ul.pictos .angeln {
+  background: url(../icon/fishing2.svg) no-repeat;
+  background-size: 100%;
+}
+
+ul.pictos .dusche {
+  background: url(../icon/shower14.svg) no-repeat;
+  background-size: 100%;
+}
+
+ul.pictos .grillen {
+  background: url(../icon/barbecue3.svg) no-repeat;
+  background-size: 100%;
+}
+
+ul.pictos .fussball {
+  background: url(../icon/soccer24.svg) no-repeat;
+  background-size: 100%;
+}
+
+ul.pictos .kiosk {
+  background: url(../icon/fastfood9.svg) no-repeat;
+  background-size: 100%;
+}
+
+ul.pictos .restaurant {
+  background: url(../icon/plate7.svg) no-repeat;
+  background-size: 100%;
+}
+
+ul.pictos .tischtennis {
+  background: url(../icon/table36.svg) no-repeat;
+  background-size: 100%;
+}
+
+ul.pictos .uebernachten {
+  background: url(../icon/sleeping.svg) no-repeat;
+  background-size: 100%;
+}
+
+ul.pictos .volleyball {
+  background: url(../icon/ball71.svg) no-repeat;
+  background-size: 100%;
+}
+
+ul.pictos .eintritt {
+  background: url(../icon/money214.svg) no-repeat;
+  background-size: 100%;
+}
+ul.pictos .wc {
+  background: url(../icon/toilet3.svg) no-repeat;
+  background-size: 100%;
+}
+ul.pictos .opnv {
+  background: url(../icon/student40.svg) no-repeat;
+  background-size: 100%;
+}
+ul.pictos .surfen {
+  background: url(../icon/waves4.svg) no-repeat;
+  background-size: 100%;
+}
+ul.pictos .spielplatz {
+  background: url(../icon/swing1.svg) no-repeat;
+  background-size: 100%;
+}
+ul.pictos .tauchen {
+  background: url(../icon/diver3.svg) no-repeat;
+  background-size: 100%;
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+

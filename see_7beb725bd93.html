@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>See-Entdecker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/template.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet-0.7.3.css" />
+    <link rel="stylesheet" href="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="js/bxslider-4.2.5/jquery.bxslider.min.css" />
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      html,body { height: 100%; }
+      .img-heading { padding-left:10px; padding-bottom:0px; padding-top:0px; }
+      ul#imgslider li {
+        left:-1px; /*this *centers* images within the slider*/
+        min-height:40px;
+      } 
+  	  .jumbotron p { font-size:14px; }
+  	  .dl-horizontal { margin-bottom:0px; }
+      #showImagesLink { cursor: pointer; }
+      .panel-body p { font-weight: 400; }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">See-Entdecker</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="map.html">Karte</a></li>
+            <li><a href="search.html">Suche</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container" style="height:100%">
+      <div id="map" style="height:30%" class="col-xs-12"></div>
+      
+
+      <div class="jumbotron col-xs-12">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Details zu <b>Starkholzbacher See</b></h3>
+            
+          </div>
+          <div class="panel-body">
+            <p>Der Starkholzbacher See ist sozusagen der Haussee der Schwäbisch Haller. Wenn es im Kocher dort zu kalt ist zum Baden, dann sind es nur ein paar Kilometer See.<br /> <br />Rund um das kleine Fachwerkhäuschen, die Gipsmühle, stehen bei schönem Wetter Bierbänke, Tische, Stühle und Sonnenschirme. Es ist kein 5-Sterne-Restaurant, aber mehr als Currywurst oder Pommes rot-weiß gibt es allemal. Das einzige WC befindet sich auch hier.<br /><br />Und wer lieber seine Steaks selbst grillt, findet eine tolle Stelle mit Schwenkgrill - wenn sie nicht gerade besetzt ist. <br /><br />Die Liegewiese fällt üppig aus, aber nicht überall darf gebadet werden. Der obere Teil des Ufers ist ein Vogelschutzgebiet. Der Flachwasserbereich ist abgetrennt.<br /><br />Einen Badesteg und eine Badeinsel gibt es am „Starki“, wie Einheimische und die Lokalpresse den See nennen. <br /><br />Der See wurde übrigens erst in den 1970er Jahren reanimiert. Seine Geschichte ist dagegen um einiges älter. Der See wurde bereits im Mittelalter von Mönchen des Klosters Gnadental angelegt.<br /><br />Vor kurzem wurde der See abgelassen, Schlamm abgetragen – die Saison kann also beginnen. (sj)</p><p><b>Anfahrt:</b> Die Zufahrt mit dem PKW zum See ist nicht möglich. Es stehen jedoch ausreichend Parkplätze sowohl an der K2592 zwischen Bibersfeld und Starkholzbach bei der Gipsmühle, als auch an der K2669 zwischen Bibersfeld und Wielandweiler zur Verfügung.</p>
+            <div class="row" style="margin-top: 24px">
+              <div class="col-xs-12 col-md-6" id="more_details_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                <dl class="dl-horizontal" id="more_details">
+                  <dt>Adresse</dt><dd>Schwäbisch Hall</dd>
+                  <!--<dt>Link</dt><dd><a href='#|see_link_href|'>#|see_link|</a></dd>-->
+	      		  <dt>WWW</dt><dd></dd>
+                  <dt>Tiefe</dt><dd></dd>
+                  <dt>Höhe</dt><dd>364,00 m</dd>
+                  <dt>Größe</dt><dd>6 Hektar</dd>
+                  <dt>Koordinaten</dt><dd><a href="geo:49.08183,9.66426" id="geo_link">49.08183, 9.66426</a></dd>
+                </dl>
+                </div>
+              </div>
+              </div>
+            
+              <div class="col-xs-12 col-md-6" id="pictos_container">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <ul class="pictos">
+                      <li><span class='pictos angeln' title='Angelmöglichkeit'>&nbsp;</span></li><li><span class='pictos grillen' title='Grillen'>&nbsp;</span></li><li><span class='pictos kiosk' title='Kiosk/Bewirtung'>&nbsp;</span></li><li><span class='pictos wc' title='Öffentliches WC'>&nbsp;</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 24px" id="imgslider_container">
+              <div class="col-xs-12 col-md-12">
+                <div class="panel panel-default">
+                    <!-- <a id="showImagesLink" href="javascript:showImages();"> -->
+                    <a id="showImagesLink">
+                    <div class="panel-heading img-heading">
+                        <h4 class="panel-heading">Bilder vom See</h4>
+                    </div>
+                    </a>
+                    <div class="panel-body" style="display:none;" id="image_container">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>       
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/leaflet-0.7.3.min.js"></script>
+    <script src="js/Leaflet.awesome-markers-2.0-develop/dist/leaflet.awesome-markers.min.js"></script>
+    <script src="js/bxslider-4.2.5/jquery.bxslider.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+        window.see.init_see('7beb725bd93', "<ul id='imgslider'><li><img src='imgs/7beb725bd93/fd1b4314644_s.JPG' srcset='imgs/7beb725bd93/fd1b4314644_l.JPG 1024w, imgs/7beb725bd93/fd1b4314644_m.JPG 800w, imgs/7beb725bd93/fd1b4314644_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/3e245532324_s.JPG' srcset='imgs/7beb725bd93/3e245532324_l.JPG 1024w, imgs/7beb725bd93/3e245532324_m.JPG 800w, imgs/7beb725bd93/3e245532324_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/3ec85d830bf_s.JPG' srcset='imgs/7beb725bd93/3ec85d830bf_l.JPG 1024w, imgs/7beb725bd93/3ec85d830bf_m.JPG 800w, imgs/7beb725bd93/3ec85d830bf_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/9b220d3c548_s.JPG' srcset='imgs/7beb725bd93/9b220d3c548_l.JPG 1024w, imgs/7beb725bd93/9b220d3c548_m.JPG 800w, imgs/7beb725bd93/9b220d3c548_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/c03af1f6171_s.JPG' srcset='imgs/7beb725bd93/c03af1f6171_l.JPG 1024w, imgs/7beb725bd93/c03af1f6171_m.JPG 800w, imgs/7beb725bd93/c03af1f6171_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/c731acf66dd_s.JPG' srcset='imgs/7beb725bd93/c731acf66dd_l.JPG 1024w, imgs/7beb725bd93/c731acf66dd_m.JPG 800w, imgs/7beb725bd93/c731acf66dd_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/10f83f6c72d_s.JPG' srcset='imgs/7beb725bd93/10f83f6c72d_l.JPG 1024w, imgs/7beb725bd93/10f83f6c72d_m.JPG 800w, imgs/7beb725bd93/10f83f6c72d_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/f2543c5338d_s.JPG' srcset='imgs/7beb725bd93/f2543c5338d_l.JPG 1024w, imgs/7beb725bd93/f2543c5338d_m.JPG 800w, imgs/7beb725bd93/f2543c5338d_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/d45825628be_s.JPG' srcset='imgs/7beb725bd93/d45825628be_l.JPG 1024w, imgs/7beb725bd93/d45825628be_m.JPG 800w, imgs/7beb725bd93/d45825628be_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/2ca14d57e38_s.JPG' srcset='imgs/7beb725bd93/2ca14d57e38_l.JPG 1024w, imgs/7beb725bd93/2ca14d57e38_m.JPG 800w, imgs/7beb725bd93/2ca14d57e38_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/38543dea7a5_s.JPG' srcset='imgs/7beb725bd93/38543dea7a5_l.JPG 1024w, imgs/7beb725bd93/38543dea7a5_m.JPG 800w, imgs/7beb725bd93/38543dea7a5_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/3f729eb53c6_s.JPG' srcset='imgs/7beb725bd93/3f729eb53c6_l.JPG 1024w, imgs/7beb725bd93/3f729eb53c6_m.JPG 800w, imgs/7beb725bd93/3f729eb53c6_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/5db2bcfd5c2_s.JPG' srcset='imgs/7beb725bd93/5db2bcfd5c2_l.JPG 1024w, imgs/7beb725bd93/5db2bcfd5c2_m.JPG 800w, imgs/7beb725bd93/5db2bcfd5c2_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/5639cc08d6c_s.JPG' srcset='imgs/7beb725bd93/5639cc08d6c_l.JPG 1024w, imgs/7beb725bd93/5639cc08d6c_m.JPG 800w, imgs/7beb725bd93/5639cc08d6c_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/3ff0bf2f792_s.JPG' srcset='imgs/7beb725bd93/3ff0bf2f792_l.JPG 1024w, imgs/7beb725bd93/3ff0bf2f792_m.JPG 800w, imgs/7beb725bd93/3ff0bf2f792_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/d0742978955_s.JPG' srcset='imgs/7beb725bd93/d0742978955_l.JPG 1024w, imgs/7beb725bd93/d0742978955_m.JPG 800w, imgs/7beb725bd93/d0742978955_s.JPG 480w'  title='Fotos: Sven Jensen'/></li><li><img src='imgs/7beb725bd93/eeac3d7787b_s.JPG' srcset='imgs/7beb725bd93/eeac3d7787b_l.JPG 1024w, imgs/7beb725bd93/eeac3d7787b_m.JPG 800w, imgs/7beb725bd93/eeac3d7787b_s.JPG 480w' /></li><li><img src='imgs/7beb725bd93/4b0140c370b_s.JPG' srcset='imgs/7beb725bd93/4b0140c370b_l.JPG 1024w, imgs/7beb725bd93/4b0140c370b_m.JPG 800w, imgs/7beb725bd93/4b0140c370b_s.JPG 480w' /></li><li><img src='imgs/7beb725bd93/694014376bb_s.JPG' srcset='imgs/7beb725bd93/694014376bb_l.JPG 1024w, imgs/7beb725bd93/694014376bb_m.JPG 800w, imgs/7beb725bd93/694014376bb_s.JPG 480w' /></li><li><img src='imgs/7beb725bd93/4b1d8db705f_s.JPG' srcset='imgs/7beb725bd93/4b1d8db705f_l.JPG 1024w, imgs/7beb725bd93/4b1d8db705f_m.JPG 800w, imgs/7beb725bd93/4b1d8db705f_s.JPG 480w' /></li></ul>");
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-97722808-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
